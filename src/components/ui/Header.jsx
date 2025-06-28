@@ -22,7 +22,6 @@ const Header = ({ onAddClick, searchQuery, setSearchQuery }) => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  // ✅ Call correct type when clicking menu items
   const handleCreateModule = () => {
     onAddClick('module');
     setIsDropdownOpen(false);
@@ -39,18 +38,18 @@ const Header = ({ onAddClick, searchQuery, setSearchQuery }) => {
   };
 
   return (
-    <div className="header">
+    <div className="header responsive-header">
       <h1 className="header-title">Course builder</h1>
-      <div className="header-right">
-        <div className="search-container">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="search-input"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value.toLowerCase())}
-          />
-        </div>
+
+      <div className="header-controls">
+        <input
+          type="text"
+          placeholder="Search..."
+          className="search-input"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value.toLowerCase())}
+        />
+
         <div className="dropdown-container" ref={dropdownRef}>
           <button className="add-button" onClick={handleAddClick}>
             Add
