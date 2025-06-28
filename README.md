@@ -1,150 +1,104 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Course Builder Application
+# 📚 Course Builder Application – Toddle Frontend Task
 
-A React.js application that allows users to create and manage online courses by adding modules and resources. This application is built with Vite, React, and CSS.
+A responsive React.js application that allows users to **create, manage, and organize course content** using **modules and resources** (links or files). Built using **React**, **Vite**, and custom CSS.
 
-## Getting Started
+---
+
+## 🚀 Features Implemented
+
+- ✅ Add, edit, and delete course modules
+- 🔗 Add resource links to each module
+- 📤 Upload and preview files (with size & name)
+- 🔍 Live search by module name or resource title
+- 🧭 Sidebar outline navigation (scroll to module)
+- 📱 Fully responsive UI
+
+---
+
+## 🛠️ Tech Stack
+
+- **React 18** with functional components
+- **Vite** for fast dev/build workflow
+- **JavaScript**, **HTML**, and **CSS**
+- No backend; data handled entirely in frontend state
+
+---
+
+## 📦 Installation & Running
 
 ### Prerequisites
 
-- Node.js (v18 or newer recommended)
-- npm (v9 or newer recommended)
+- Node.js `v18+`
+- npm `v9+`
 
-### Installation
+### Local Setup
 
-1. Clone the repository or download the source code:
+# 1. Clone the repository
+git clone https://github.com/niharika-2510/course-builder-app.git
 
-```bash
-git clone <repository-url>
-# or
-# download and extract the project
-```
+# 2. Navigate to the project folder
+cd course-builder-app
 
-2. Navigate to the project directory:
-
-```bash
-cd toddle-test-app
-```
-
-3. Install the dependencies:
-
-```bash
+# 3. Install dependencies
 npm install
-```
 
-### Development
-
-To start the development server:
-
-```bash
+# 4. Start the development server
 npm run dev
-```
 
-This will start the development server at `http://localhost:5173`.
+## 📁 Folder Structure
 
-### Linting and Formatting
-
-To check for linting errors:
-
-```bash
-npm run lint
-```
-
-To automatically fix linting errors (when possible):
-
-```bash
-npm run lint:fix
-```
-
-To format your code using Prettier:
-
-```bash
-npm run format
-```
-
-### Building for Production
-
-To build the project for production:
-
-```bash
-npm run build
-```
-
-The build artifacts will be stored in the `dist/` directory.
-
-### Preview Production Build
-
-To preview the production build locally:
-
-```bash
-npm run preview
-```
-## Folder Structure
-
-```
-my-react-app/
-├── eslint.config.js     # ESLint configuration
-├── .prettierrc          # Prettier configuration
-├── .prettierignore      # Files to ignore by Prettier
-├── .vscode/             # VS Code settings
-├── public/              # Public assets
-├── src/                 # Source files
-│   ├── assets/          # Static assets
-│   ├── components/      # React components (add as needed)
-│   ├── App.jsx          # Root component
-│   └── main.jsx         # Entry point
-└── index.html           # HTML template
-```
-
-```
 src/
-  ├── components/
-  │   ├── modules/
-  │   │   ├── CourseBuilder.jsx     # Main component that orchestrates the application
-  │   │   ├── ModuleCard.jsx        # Component for displaying individual modules
-  │   │   ├── ModuleModal.jsx       # Modal for creating/editing modules
-  │   │   ├── ModuleItem.jsx        # Component for displaying module items (links, files)
-  │   │   ├── LinkModal.jsx         # Modal for adding links to modules
-  │   │   └── UploadModal.jsx       # Modal for uploading files to modules
-  │   └── ui/
-  │       ├── Header.jsx            # Application header with search and dropdown
-  │       └── EmptyState.jsx        # Shown when no modules exist
-  ├── assets/
-  ├── App.jsx                       # App entry point
-  ├── App.css                       # Application styling
-  ├── main.jsx
-  └── index.css
-```
+├── components/
+│   ├── modules/
+│   │   ├── CourseBuilder.jsx      # Main layout & logic
+│   │   ├── ModuleCard.jsx         # Module box
+│   │   ├── ModuleModal.jsx        # Modal to add/edit modules
+│   │   ├── UploadModal.jsx        # File upload modal
+│   │   ├── LinkModal.jsx          # Link input modal
+│   │   └── ModuleItem.jsx         # Individual file/link display
+│   └── ui/
+│       ├── Header.jsx             # Top bar with search & add
+│       ├── EmptyState.jsx         # Empty screen fallback
+│       └── OutlineSidebar.jsx     # Scrollable module list
+├── assets/                        # Static assets (SVGs, images)
+├── App.jsx                        # Main app wrapper
+├── main.jsx                       # Entry point
+├── App.css, index.css             # Styling
 
-## Application Architecture
+## 🧩 Application Architecture
 
-### Component Hierarchy
-
-```
 App
 └── CourseBuilder
     ├── Header
-    ├── EmptyState (conditionally rendered)
-    ├── ModuleCard (multiple instances)
-    │   └── ModuleItem (multiple instances)
+    ├── OutlineSidebar
+    ├── EmptyState (if no modules)
+    ├── ModuleCard (for each module)
+    │   └── ModuleItem (files/links)
     ├── ModuleModal
-    ├── LinkModal
-    └── UploadModal
-```
+    ├── UploadModal
+    └── LinkModal
+## 📝 Notes for Reviewers
+All components are modular and reusable.
 
-## Handoff Notes for Candidates
+No external state manager is used; everything is handled via local React state.
 
-When extending this application:
+File uploads are virtual — they generate local preview links without a backend.
 
-1. Follow the established component structure and naming conventions
-2. Maintain consistent styling with the existing UI, Try to make the UI consistent with the Figma design
-3. Use React state appropriately for new features
-4. Ensure responsive behavior works on all screen sizes
-5. Add appropriate comments for complex logic
-=======
-# course-builder-app
->>>>>>> d6ba8fe68f478fc1209c127d58a2f7122af08ec5
-=======
-# course-builder-app
->>>>>>> d6ba8fe68f478fc1209c127d58a2f7122af08ec5
+Live search supports filtering both module names and resource titles.
+
+Component names, folder structure, and state logic follow clean conventions.
+
+## 🔗 GitHub Repository
+Submitted by: Niharika Dhingra
+Repo Link: https://github.com/niharika-2510/course-builder-app
+
+## 🧪 Optional Commands
+
+# Format with Prettier
+npm run format
+
+# Lint check
+npm run lint
+
+
+
