@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Course Builder Application
 
 A React.js application that allows users to create and manage online courses by adding modules and resources. This application is built with Vite, React, and CSS.
@@ -141,6 +142,9 @@ When extending this application:
 3. Use React state appropriately for new features
 4. Ensure responsive behavior works on all screen sizes
 5. Add appropriate comments for complex logic
+=======
+# course-builder-app
+>>>>>>> d6ba8fe68f478fc1209c127d58a2f7122af08ec5
 =======
 # course-builder-app
 >>>>>>> d6ba8fe68f478fc1209c127d58a2f7122af08ec5
